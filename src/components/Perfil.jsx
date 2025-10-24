@@ -28,7 +28,7 @@ function Perfil() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-[80%] sm:w-[70%] md:w-[85%]
-                         bg-[#7EC8E3] text-[#2C3E50] font-bold py-2 rounded-xl 
+                         bg-[#7EC8E3] text-[#000000] font-bold py-2 rounded-xl 
                          shadow-md hover:scale-105 transition-transform duration-200"
             >
               <svg className="w-6 h-6" aria-hidden="true">
