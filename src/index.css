@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --background-dark: #0f172a; /* fondo dark */
+  --background-light: #E4E7EF; /* fondo light */
+  --foreground-dark: #C4D7E9;
+  --foreground-light: #2C3E50;
+}
+
+/* Aplica colores por defecto (modo dark inicial) */
+body {
+  background-color: var(--background-dark);
+  color: var(--foreground-dark);
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Cuando se active modo claro */
+body.light {
+  background-color: var(--background-light);
+  color: var(--foreground-light);
+}
