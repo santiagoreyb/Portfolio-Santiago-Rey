@@ -1,4 +1,5 @@
 import { FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import perfil from "../assets/pictures/profile.png";
 import cvEs from "../assets/CV/Hoja de Vida - Santiago Camilo Rey Benavides.pdf";
 import cvEn from "../assets/CV/Resume - Santiago Camilo Rey Benavides.pdf";
@@ -81,12 +82,45 @@ function Perfil({ darkMode, lang }) {
                  px-2 py-6 pt-24 transition-colors duration-500"
     >
       {/* 📸 Imagen */}
-      <div className="order-1 md:order-2 flex flex-col items-center space-y-2">
-        <img
-          src={perfil}
-          alt="profile"
-          className="w-40 sm:w-52 md:w-64 lg:w-52 xl:w-80 h-auto rounded-2xl object-cover shadow-lg"
-        />
+      <div className="order-1 md:order-2 flex flex-col items-center space-y-4">
+
+        {/* 🔥 CONTENEDOR NEÓN SUAVE */}
+        <motion.div
+          className="rounded-2xl p-[3px]"
+          animate={{
+            boxShadow: [
+              "0 0 4px rgba(0, 200, 255, 0.25)",
+              "0 0 10px rgba(0, 200, 255, 0.15)",
+              "0 0 4px rgba(0, 200, 255, 0.25)",
+            ],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          }}
+          style={{
+            background: "rgba(0, 150, 255, 0.15)",
+            borderRadius: "16px",
+          }}
+        >
+          {/* 🖼 Imagen con animación muy suave */}
+          <motion.img
+            src={perfil}
+            alt="profile"
+            className="w-40 sm:w-52 md:w-64 lg:w-52 xl:w-80 
+                      aspect-square object-cover object-top rounded-2xl shadow-md"
+            animate={{ scale: [1, 1.015, 1] }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+
 
         {/* 🔗 Redes */}
         <div className="w-full flex flex-col gap-3 items-center mt-4">
@@ -119,8 +153,8 @@ function Perfil({ darkMode, lang }) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-[85%] sm:w-[70%] md:w-[85%]
-                      bg-[#7EC8E3] text-[#2C3E50] font-bold py-2 rounded-xl 
-                      shadow-md hover:scale-105 transition-transform duration-200"
+                       bg-[#7EC8E3] text-[#2C3E50] font-bold py-2 rounded-xl 
+                       shadow-md hover:scale-105 transition-transform duration-200"
           >
             <FaFileAlt className="w-6 h-6" />
             <span>{current.viewCV}</span>
