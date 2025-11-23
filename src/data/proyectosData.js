@@ -119,7 +119,7 @@ export const proyectos = [
     imagenes: [UniversityAdmissions.university1, UniversityAdmissions.university2, UniversityAdmissions.university3],
     tecnologias: [
       { name: ".NET 8", logo: "icon-net-framework" },
-      { name: "Razor Views", logo: "icon-visual-studio" },
+      { name: "Razor Views", logo: "icon-net-framework" },
       { name: "Oracle DB", logo: "icon-oracle-pl-sql" },
       { name: "PL/SQL", logo: "icon-oracle-pl-sql" },
     ],

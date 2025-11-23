@@ -55,6 +55,8 @@ function Habilidades({ darkMode, lang}) {
         { nombre: "Tailwind CSS", logo: "icon-tailwind_css" },
         { nombre: "Bootstrap", logo: "icon-bootstrap" },
         { nombre: "Vite", logo: "icon-vite" },
+        { nombre: "JavaFX", logo: "icon-scene-builder" },
+        { nombre: "Razor Views", logo: "icon-net-framework" },
       ],
     },
     {
