@@ -91,16 +91,44 @@ function Proyectos({ darkMode, lang}) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
-            <motion.img
-              src={globalFullImage}
-              alt="Vista ampliada"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain relative z-[9999]"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} 
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={globalFullImage.index}
+                src={globalFullImage.imgs[globalFullImage.index]}
+                alt="Vista ampliada"
+                className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain relative z-[9999]"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                onClick={(e) => e.stopPropagation()} 
+              />
+            </AnimatePresence>
+
+            {globalFullImage.imgs.length > 1 && (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setGlobalFullImage(prev => ({ ...prev, index: (prev.index - 1 + prev.imgs.length) % prev.imgs.length }));
+                  }}
+                  className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 rounded-full text-white bg-white/10 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 z-[10000] font-bold text-2xl"
+                  title={lang === "es" ? "Anterior" : "Previous"}
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setGlobalFullImage(prev => ({ ...prev, index: (prev.index + 1) % prev.imgs.length }));
+                  }}
+                  className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 rounded-full text-white bg-white/10 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 z-[10000] font-bold text-2xl"
+                  title={lang === "es" ? "Siguiente" : "Next"}
+                >
+                  ›
+                </button>
+              </>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -128,24 +156,24 @@ function ProyectoCard({ proyecto, darkMode, lang, delay, setGlobalFullImage }) {
       }`}
     >
       {/* Slider */}
-      <div className="relative h-64 overflow-hidden group">
-        <AnimatePresence mode="wait">
+      <div className="relative h-64 overflow-hidden group bg-black/5">
+        <AnimatePresence>
           <motion.img
             key={index}
             src={imgs[index]}
             alt={`${proyecto.titulo[lang]} ${index}`}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.5 }}
-            onClick={() => setGlobalFullImage(imgs[index])}
-            className="w-full h-full object-contain bg-black/10 cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => setGlobalFullImage({ imgs, index })}
+            className="w-full h-full object-contain absolute inset-0 cursor-pointer"
             title={lang === "es" ? "Clic para ampliar" : "Click to enlarge"}
           />
         </AnimatePresence>
 
         <button
-          onClick={() => setGlobalFullImage(imgs[index])}
+          onClick={() => setGlobalFullImage({ imgs, index })}
           className={`absolute top-2 right-2 p-2 rounded-lg text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 ${
             darkMode
               ? "bg-black/50 hover:bg-black/70 text-white"
