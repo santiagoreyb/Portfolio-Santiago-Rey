@@ -12,28 +12,25 @@ function Perfil({ darkMode, lang }) {
       role: "Ingeniero de Sistemas",
       description: (
         <>
-          con experiencia en{" "}
+          con sólida experiencia en{" "}
           <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
-            desarrollo de software full-stack
+            desarrollo full-stack y arquitecturas en la nube
           </span>
-          , hábil en el diseño y construcción de{" "}
+          . Especializado en el diseño y construcción de{" "}
           <span className={darkMode ? "text-[#F5D88C]" : "text-[#B28100]"}>
-            aplicaciones móviles, web y videojuegos
+            aplicaciones web, móviles y videojuegos
           </span>
-          , con dominio de tecnologías modernas y enfoque en buenas prácticas de
-          desarrollo. Apasionado por crear soluciones{" "}
+          , destaco por integrar soluciones avanzadas de{" "}
+          <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
+            Inteligencia Artificial
+          </span>
+          , como sistemas RAG, apoyadas en infraestructuras escalables y seguras. Con un rigor técnico enfocado en las buenas prácticas de desarrollo, me apasiona aprovechar el poder de las tecnologías modernas para crear productos digitales eficientes,{" "}
           <span className={darkMode ? "text-[#F8FAFC]" : "text-[#000000]"}>
-            centradas en el usuario
-          </span>
-          ,{" "}
-          <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
-            accesibles
+            centrados en el usuario
           </span>{" "}
-          y{" "}
           <span className={darkMode ? "text-[#F5D88C]" : "text-[#B28100]"}>
-            sostenibles
+            y orientados hacia la accesibilidad y la sostenibilidad.
           </span>
-          .
         </>
       ),
       viewCV: "Ver CV",
@@ -44,28 +41,25 @@ function Perfil({ darkMode, lang }) {
       role: "Systems Engineer",
       description: (
         <>
-          with experience in{" "}
+          with solid experience in{" "}
           <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
-            full-stack software development
+            full-stack development and cloud architectures
           </span>
-          , skilled in designing and building{" "}
+          . Specialized in designing and building{" "}
           <span className={darkMode ? "text-[#F5D88C]" : "text-[#B28100]"}>
-            mobile, web, and game applications
+            web, mobile, and video game applications
           </span>
-          , with strong command of modern technologies and focus on good
-          development practices. Passionate about creating{" "}
+          , I stand out for integrating advanced{" "}
+          <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
+            Artificial Intelligence
+          </span>{" "}
+          solutions, such as RAG systems, supported by scalable and secure infrastructures. With a technical rigor focused on good development practices, I am passionate about leveraging the power of modern technologies to create efficient digital products,{" "}
           <span className={darkMode ? "text-[#F8FAFC]" : "text-[#000000]"}>
             user-centered
-          </span>
-          ,{" "}
-          <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
-            accessible
           </span>{" "}
-          and{" "}
           <span className={darkMode ? "text-[#F5D88C]" : "text-[#B28100]"}>
-            sustainable
-          </span>{" "}
-          solutions.
+            and oriented towards accessibility and sustainability.
+          </span>
         </>
       ),
       viewCV: "View CV",
