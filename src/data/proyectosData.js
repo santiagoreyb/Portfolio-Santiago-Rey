@@ -12,10 +12,28 @@ import {
   Tablut,
   Solar,
   FastE,
-  FastU
+  FastU,
+  SURE
 } from "../assets/Proyectos/imagesP.js";
 
 export const proyectos = [
+  {
+    titulo: { es: "SURE Agent", en: "SURE Agent" },
+    descripcion: {
+      es: "Agente inteligente y plataforma integral para optimizar la toma de decisiones empresariales.",
+      en: "Intelligent agent and comprehensive platform to optimize business decision-making."
+    },
+    fecha: "2026",
+    imagenes: [SURE.sure1, SURE.sure2, SURE.sure3, SURE.sure4],
+    tecnologias: [
+      { name: "React", logo: "icon-react" },
+      { name: "Node.js", logo: "icon-nodejs" },
+      { name: "IA", logo: "icon-brain-3" },
+      { name: "Azure", logo: "icon-azure-1" },
+    ],
+    repo: "https://github.com/SURE-Agent/Sure",
+    demo: "https://sure-cvabeeb9hugtbtcr.brazilsouth-01.azurewebsites.net/"
+  },
   {
     titulo: { es: "NeonCat", en: "NeonCat" },
     descripcion: {

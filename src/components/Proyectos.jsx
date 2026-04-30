@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { proyectos as proyectosData } from "../data/proyectosData"; // JSON multilenguaje
 import {
@@ -8,6 +9,7 @@ import {
 
 function Proyectos({ darkMode, lang}) {
   const [isOpen, setIsOpen] = useState(true);
+  const [globalFullImage, setGlobalFullImage] = useState(null);
 
   return (
     <div
@@ -62,17 +64,52 @@ function Proyectos({ darkMode, lang}) {
               darkMode={darkMode}
               lang={lang}
               delay={idx * 0.1}
+              setGlobalFullImage={setGlobalFullImage}
             />
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {globalFullImage && (
+          <motion.div
+            className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setGlobalFullImage(null)}
+          >
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setGlobalFullImage(null);
+              }}
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white bg-white/10 hover:bg-red-500 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 z-[10000] flex items-center justify-center"
+              title={lang === "es" ? "Cerrar" : "Close"}
+            >
+              <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <motion.img
+              src={globalFullImage}
+              alt="Vista ampliada"
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain relative z-[9999]"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()} 
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
-function ProyectoCard({ proyecto, darkMode, lang, delay }) {
+function ProyectoCard({ proyecto, darkMode, lang, delay, setGlobalFullImage }) {
   const [index, setIndex] = useState(0);
-  const [fullImage, setFullImage] = useState(null);
 
   const imgs = proyecto.imagenes && proyecto.imagenes.length ? proyecto.imagenes : [Portafolio.portfolio];
 
@@ -101,12 +138,14 @@ function ProyectoCard({ proyecto, darkMode, lang, delay }) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full object-contain bg-black/10"
+            onClick={() => setGlobalFullImage(imgs[index])}
+            className="w-full h-full object-contain bg-black/10 cursor-pointer"
+            title={lang === "es" ? "Clic para ampliar" : "Click to enlarge"}
           />
         </AnimatePresence>
 
         <button
-          onClick={() => setFullImage(imgs[index])}
+          onClick={() => setGlobalFullImage(imgs[index])}
           className={`absolute top-2 right-2 p-2 rounded-lg text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 ${
             darkMode
               ? "bg-black/50 hover:bg-black/70 text-white"
@@ -141,28 +180,6 @@ function ProyectoCard({ proyecto, darkMode, lang, delay }) {
             </button>
           </>
         )}
-
-        <AnimatePresence>
-          {fullImage && (
-            <motion.div
-              className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setFullImage(null)}
-            >
-              <motion.img
-                src={fullImage}
-                alt="Vista ampliada"
-                className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
       {/* Info */}

@@ -79,6 +79,12 @@ import fastu5 from "./FastU/fastu5.png";
 import fastu6 from "./FastU/fastu6.png";
 import fastu7 from "./FastU/fastu7.png";
 
+// SURE
+import sure1 from "./SURE/sure1.png";
+import sure2 from "./SURE/sure2.png";
+import sure3 from "./SURE/sure3.png";
+import sure4 from "./SURE/sure4.png";
+
 // ✅ Export agrupado
 export const NeonCat = { neoncat1, neoncat2 };
 export const EcoGuardians = { eco1, eco2, eco3 };
@@ -94,3 +100,4 @@ export const Tablut = { tablut1};
 export const Solar = { system1, system2, system3, system4};
 export const FastE = { faste1, faste2, faste3, faste4, faste5, faste6};
 export const FastU = { fastu1, fastu2, fastu3, fastu4, fastu5, fastu6, fastu7};
+export const SURE = { sure1, sure2, sure3, sure4 };

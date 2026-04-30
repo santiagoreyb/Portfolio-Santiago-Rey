@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import colpensiones from "../assets/pictures/colpensiones.png";
 import freelance from "../assets/pictures/freelance.png"; // 🔹 Logo genérico
+import ecu from "../assets/pictures/ecu.png";
 
 function Experiencia({ darkMode, lang}) {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,6 +23,47 @@ function Experiencia({ darkMode, lang}) {
 
   // Contenido bilingüe
   const experiences = [
+    {
+      company: "ECU Worldwide",
+      role: {
+        es: "Desarrollador Full Stack / Ingeniero de Software",
+        en: "Full Stack Developer / Software Engineer",
+      },
+      date: {
+        es: "Bogotá, Colombia · Dic 2025 – Presente",
+        en: "Bogotá, Colombia · Dec 2025 – Present",
+      },
+      logo: ecu,
+      description: {
+        es: [
+          "Desarrollé y mantuve aplicaciones web escalables utilizando Angular, Java, C#, .NET 8/10 y VB, participando en la definición de arquitecturas y mejores prácticas de desarrollo.",
+          "Lideré integraciones hacia sistemas de aduanas en LATAM y EE. UU. (formatos XML, EDI, PDF), automatizando procesos, reduciendo costos operativos y agilizando envíos.",
+          "Implementé e integré webservices y procesos automatizados por SFTP mediante archivos planos para asegurar una correcta comunicación y transferencia de datos entre sistemas.",
+          "Diseñé y optimicé consultas y procedimientos almacenados en bases de datos PostgreSQL y SQL Server, mejorando el rendimiento general.",
+          "Administré y desplegué infraestructura y servicios en Microsoft Azure, colaborando con equipos de DevOps para asegurar integración continua (CI/CD) y escalabilidad.",
+          "Brindé soporte técnico, documenté procesos técnicos de manera precisa y resolví issues críticos de implementaciones anteriores durante la fase de implementación.",
+        ],
+        en: [
+          "Developed and maintained scalable web applications using Angular, Java, C#, .NET 8/10, and VB, participating in defining architectures and best development practices.",
+          "Led integrations with customs systems in LATAM and the US (XML, EDI, PDF formats), automating processes, reducing operational costs, and streamlining shipments.",
+          "Implemented and integrated webservices and automated SFTP processes via flat files to ensure proper communication and data transfer between systems.",
+          "Designed and optimized queries and stored procedures in PostgreSQL and SQL Server databases, improving overall performance.",
+          "Managed and deployed infrastructure and services on Microsoft Azure, collaborating with DevOps teams to ensure continuous integration (CI/CD) and scalability.",
+          "Provided technical support, accurately documented technical processes, and resolved critical issues from previous implementations during the deployment phase.",
+        ],
+      },
+      logos: [
+        "icon-angularjs",
+        "icon-java-coffee-cup-logo",
+        "icon-c-sharp-logo",
+        "icon-net-framework",
+        "icon-postgresql",
+        "icon-microsoft-sql-server",
+        "icon-git",
+        "icon-azure-1"
+      ],
+      technologies: ["Angular", "Java", "C#", ".NET", "PostgreSQL", "SQL Server", "DevOps", "Azure"],
+    },
     {
       company: "Colpensiones",
       role: {

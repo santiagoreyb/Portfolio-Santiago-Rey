@@ -11,6 +11,10 @@ import piloto from "../assets/pictures/piloto.png";
 import redhatpdf from "../assets/certificados/redhat.pdf";
 import pilotopdf from "../assets/certificados/piloto.pdf";
 import senapdf from "../assets/certificados/sena.pdf";
+import microsoft from "../assets/pictures/microsoft.svg";
+import aws from "../assets/pictures/aws.svg";
+import codigofacilito from "../assets/pictures/codigofacilito.png";
+import azureaipdf from "../assets/certificados/AzureAI.pdf";
 
 function CursosCertificados({ darkMode, lang = "es" }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -25,6 +29,7 @@ function CursosCertificados({ darkMode, lang = "es" }) {
         Cloud: "Cloud",
         "Metodologías Ágiles": "Metodologías Ágiles",
         "Sistemas Operativos": "Sistemas Operativos",
+        "Inteligencia Artificial": "Inteligencia Artificial",
       },
     },
     en: {
@@ -36,6 +41,7 @@ function CursosCertificados({ darkMode, lang = "es" }) {
         Cloud: "Cloud",
         "Metodologías Ágiles": "Agile Methodologies",
         "Sistemas Operativos": "Operating Systems",
+        "Inteligencia Artificial": "Artificial Intelligence",
       },
     },
   };
@@ -43,6 +49,86 @@ function CursosCertificados({ darkMode, lang = "es" }) {
   const t = textos[lang];
 
   const cursos = [
+    {
+      area: "Cloud",
+      role: "Associate Cloud Engineer",
+      company: "Google",
+      date: "Feb 2026",
+      logo: google,
+      insights:
+        lang === "es"
+          ? [
+              "Certificación oficial de Google Cloud Platform.",
+              "Implementación, despliegue y mantenimiento de soluciones en la nube.",
+            ]
+          : [
+              "Official Google Cloud Platform Certification.",
+              "Deployment and maintenance of cloud solutions.",
+            ],
+      insignia: "https://www.credly.com/badges/38fa8e85-e960-4858-9eee-5a8ae62685c7/linked_in_profile",
+      technologies: ["GCP", "Cloud Computing"],
+      logos: ["icon-google-cloud", "icon-cloud-storage"],
+    },
+    {
+      area: "Desarrollo",
+      role: "Innovation Challenge Hackathon",
+      company: "Microsoft",
+      date: "Apr 2026",
+      logo: microsoft,
+      insights:
+        lang === "es"
+          ? [
+              "Participación en Hackathon de innovación tecnológica.",
+              "Desarrollo de soluciones creativas usando tecnologías Microsoft.",
+            ]
+          : [
+              "Participation in technological innovation Hackathon.",
+              "Development of creative solutions using Microsoft technologies.",
+            ],
+      insignia: "https://www.credly.com/badges/ae8e3e9e-8693-42a5-8cc9-dde612a9a7fc/linked_in_profile",
+      technologies: ["Microsoft", "Innovation"],
+      logos: ["icon-windows", "icon-problem-solving"],
+    },
+    {
+      area: "Inteligencia Artificial",
+      role: "Bootcamp Azure AI Engineer Associate",
+      company: "códigofacilito",
+      date: "Mar 2026",
+      logo: codigofacilito,
+      insights:
+        lang === "es"
+          ? [
+              "Diseño e implementación de soluciones de Inteligencia Artificial en Azure.",
+              "Uso de servicios cognitivos y machine learning.",
+            ]
+          : [
+              "Design and implementation of Artificial Intelligence solutions on Azure.",
+              "Use of cognitive services and machine learning.",
+            ],
+      insignia: azureaipdf,
+      technologies: ["Azure AI", "Machine Learning"],
+      logos: ["icon-azure-1", "icon-brain-3"],
+    },
+    {
+      area: "Cloud",
+      role: "AWS/re/Start",
+      company: "Amazon Web Services",
+      date: lang === "es" ? "En curso (May 2026)" : "In progress (May 2026)",
+      logo: aws,
+      insights:
+        lang === "es"
+          ? [
+              "Fundamentos de AWS Cloud, Linux, redes, seguridad y bases de datos.",
+              "Preparación para la certificación AWS Certified Cloud Practitioner.",
+            ]
+          : [
+              "AWS Cloud fundamentals, Linux, networking, security, and databases.",
+              "Preparation for the AWS Certified Cloud Practitioner certification.",
+            ],
+      insignia: "",
+      technologies: ["AWS", "Linux", "Networking"],
+      logos: ["icon-amazon-web-services", "icon-linux", "icon-settings-3"],
+    },
     {
       area: "Desarrollo",
       role:
@@ -285,6 +371,7 @@ function CursosCertificados({ darkMode, lang = "es" }) {
 
   const ordenAreas = [
     "Desarrollo",
+    "Inteligencia Artificial",
     "Computación Cuántica",
     "Cloud",
     "Metodologías Ágiles",
