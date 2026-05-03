@@ -4,7 +4,7 @@ import colpensiones from "../assets/pictures/colpensiones.png";
 import freelance from "../assets/pictures/freelance.png"; // 🔹 Logo genérico
 import ecu from "../assets/pictures/ecu.png";
 
-function Experiencia({ darkMode, lang}) {
+function Experiencia({ darkMode, lang }) {
   const [isOpen, setIsOpen] = useState(true);
 
   // Traducciones de texto fijo
@@ -36,7 +36,7 @@ function Experiencia({ darkMode, lang}) {
       logo: ecu,
       description: {
         es: [
-          "Desarrollé y mantuve aplicaciones web escalables utilizando Angular, Java, C#, .NET 8/10 y VB, participando en la definición de arquitecturas y mejores prácticas de desarrollo.",
+          "Desarrollé y mantuve aplicaciones web escalables utilizando Angular, Java, Python, C#, .NET 8/10 y VB, participando en la definición de arquitecturas y mejores prácticas de desarrollo.",
           "Lideré integraciones hacia sistemas de aduanas en LATAM y EE. UU. (formatos XML, EDI, PDF), automatizando procesos, reduciendo costos operativos y agilizando envíos.",
           "Implementé e integré webservices y procesos automatizados por SFTP mediante archivos planos para asegurar una correcta comunicación y transferencia de datos entre sistemas.",
           "Diseñé y optimicé consultas y procedimientos almacenados en bases de datos PostgreSQL y SQL Server, mejorando el rendimiento general.",
@@ -44,7 +44,7 @@ function Experiencia({ darkMode, lang}) {
           "Brindé soporte técnico, documenté procesos técnicos de manera precisa y resolví issues críticos de implementaciones anteriores durante la fase de implementación.",
         ],
         en: [
-          "Developed and maintained scalable web applications using Angular, Java, C#, .NET 8/10, and VB, participating in defining architectures and best development practices.",
+          "Developed and maintained scalable web applications using Angular, Java, Python, C#, .NET 8/10, and VB, participating in defining architectures and best development practices.",
           "Led integrations with customs systems in LATAM and the US (XML, EDI, PDF formats), automating processes, reducing operational costs, and streamlining shipments.",
           "Implemented and integrated webservices and automated SFTP processes via flat files to ensure proper communication and data transfer between systems.",
           "Designed and optimized queries and stored procedures in PostgreSQL and SQL Server databases, improving overall performance.",
@@ -55,14 +55,15 @@ function Experiencia({ darkMode, lang}) {
       logos: [
         "icon-angularjs",
         "icon-java-coffee-cup-logo",
+        "icon-python",
         "icon-c-sharp-logo",
         "icon-net-framework",
         "icon-postgresql",
         "icon-microsoft-sql-server",
         "icon-git",
-        "icon-azure-1"
+        "icon-azure-1",
       ],
-      technologies: ["Angular", "Java", "C#", ".NET", "PostgreSQL", "SQL Server", "DevOps", "Azure"],
+      technologies: ["Angular", "Java", "Python", "C#", ".NET", "PostgreSQL", "SQL Server", "DevOps", "Azure"],
     },
     {
       company: "Colpensiones",
@@ -174,9 +175,8 @@ function Experiencia({ darkMode, lang}) {
 
   return (
     <div
-      className={`w-[90%] max-w-6xl mx-auto pt-0 transition-all duration-300 ${
-        isOpen ? "min-h-screen" : "h-auto"
-      }`}
+      className={`w-[90%] max-w-6xl mx-auto pt-0 transition-all duration-300 ${isOpen ? "min-h-screen" : "h-auto"
+        }`}
     >
       {/* Encabezado */}
       <div className="relative mb-6">
@@ -196,18 +196,16 @@ function Experiencia({ darkMode, lang}) {
 
       {/* Línea decorativa */}
       <div
-        className={`mx-auto h-[2px] w-full rounded-full ${
-          darkMode ? "bg-cyan-300/50" : "bg-gray-700"
-        }`}
+        className={`mx-auto h-[2px] w-full rounded-full ${darkMode ? "bg-cyan-300/50" : "bg-gray-700"
+          }`}
       ></div>
 
       {/* Contenido */}
       <div
-        className={`transition-all duration-700 ease-in-out ${
-          isOpen
+        className={`transition-all duration-700 ease-in-out ${isOpen
             ? "max-h-none mt-6 opacity-100 overflow-visible"
             : "max-h-0 mt-0 opacity-0 overflow-hidden"
-        }`}
+          }`}
       >
 
         <div className="relative flex flex-col items-start">
@@ -228,11 +226,10 @@ function Experiencia({ darkMode, lang}) {
               {/* Tarjeta */}
               <div className="ml-12 flex-1">
                 <div
-                  className={`p-6 rounded-2xl shadow-lg backdrop-blur-md border transition-all duration-300 ${
-                    darkMode
+                  className={`p-6 rounded-2xl shadow-lg backdrop-blur-md border transition-all duration-300 ${darkMode
                       ? "bg-[#0f172a] border-cyan-500/30 hover:border-cyan-400/60"
                       : "bg-[#DCE3F2] border-[#b6c2d9] hover:border-[#8ca3c6]"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <img
@@ -242,23 +239,20 @@ function Experiencia({ darkMode, lang}) {
                     />
                     <div>
                       <h3
-                        className={`text-xl font-semibold ${
-                          darkMode ? "text-cyan-300" : "text-[#2B4162]"
-                        }`}
+                        className={`text-xl font-semibold ${darkMode ? "text-cyan-300" : "text-[#2B4162]"
+                          }`}
                       >
                         {exp.role[lang]}
                       </h3>
                       <p
-                        className={`text-sm ${
-                          darkMode ? "text-[#C4D7E9]" : "text-[#3b4c63]"
-                        }`}
+                        className={`text-sm ${darkMode ? "text-[#C4D7E9]" : "text-[#3b4c63]"
+                          }`}
                       >
                         {exp.company}
                       </p>
                       <p
-                        className={`text-xs ${
-                          darkMode ? "text-[#C4D7E9]" : "text-[#516078]"
-                        }`}
+                        className={`text-xs ${darkMode ? "text-[#C4D7E9]" : "text-[#516078]"
+                          }`}
                       >
                         {exp.date[lang]}
                       </p>
@@ -266,9 +260,8 @@ function Experiencia({ darkMode, lang}) {
                   </div>
 
                   <ul
-                    className={`list-disc list-inside mb-4 leading-relaxed space-y-2 ml-1 ${
-                      darkMode ? "text-[#C4D7E9]" : "text-[#2b3a50]"
-                    }`}
+                    className={`list-disc list-inside mb-4 leading-relaxed space-y-2 ml-1 ${darkMode ? "text-[#C4D7E9]" : "text-[#2b3a50]"
+                      }`}
                   >
                     {exp.description[lang].map((item, i) => (
                       <li key={i}>{item}</li>
@@ -279,11 +272,10 @@ function Experiencia({ darkMode, lang}) {
                     {exp.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm border ${
-                          darkMode
+                        className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm border ${darkMode
                             ? "bg-cyan-400/10 border-cyan-400/40 text-cyan-300"
                             : "bg-[#edf2f9] border-[#b6c2d9] text-[#345678]"
-                        }`}
+                          }`}
                       >
                         <svg className="w-5 h-5" aria-hidden="true">
                           <use href={`/portfolio.min.svg#${exp.logos[i]}`} />

@@ -411,18 +411,19 @@ function CursosCertificados({ darkMode, lang = "es" }) {
       ></div>
 
       <div
-        className={`overflow-hidden transition-all duration-700 ease-in-out ${
-          isOpen ? "max-h-[5000px] mt-2 opacity-100" : "max-h-0 mt-0 opacity-0"
+        className={`grid transition-all duration-700 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] mt-2 opacity-100" : "grid-rows-[0fr] mt-0 opacity-0"
         }`}
       >
-        <div className="columns-1 md:columns-2 gap-6 space-y-6 mt-10">
+        <div className="overflow-hidden">
+          <div className="md:columns-2 gap-6 pt-10 pb-4">
           {areasOrdenadas.map(([area, cursosFiltrados], index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`break-inside-avoid p-6 rounded-2xl shadow-lg backdrop-blur-md border transition-all duration-300 ${
+              className={`break-inside-avoid mb-6 p-6 rounded-2xl shadow-lg backdrop-blur-md border transition-all duration-300 ${
                 darkMode
                   ? "bg-[#0f172a] border-cyan-500/30 hover:border-cyan-400/60"
                   : "bg-[#D9DEE8] border-[#93B4D4] hover:border-[#7CA5CE]"
@@ -533,6 +534,7 @@ function CursosCertificados({ darkMode, lang = "es" }) {
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
       </div>
     </div>
