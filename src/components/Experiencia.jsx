@@ -72,8 +72,8 @@ function Experiencia({ darkMode, lang }) {
         en: "Full Stack Developer and Automation Engineer",
       },
       date: {
-        es: "Bogotá, Colombia · Feb 2025 – Presente",
-        en: "Bogotá, Colombia · Feb 2025 – Present",
+        es: "Bogotá, Colombia · Feb 2025 – Nov 2025",
+        en: "Bogotá, Colombia · Feb 2025 – Nov 2025",
       },
       logo: colpensiones,
       description: {

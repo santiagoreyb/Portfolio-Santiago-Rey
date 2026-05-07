@@ -81,6 +81,13 @@ function Habilidades({ darkMode, lang}) {
         { nombre: "Pandas", logo: "icon-pandas" },
         { nombre: "NumPy", logo: "icon-numpy" },
         { nombre: lang === "es" ? "IA Generativa" : "Generative AI", logo: "icon-ai-generated-code" },
+        { nombre: "Machine Learning", logo: "icon-brain-3" },
+        { nombre: "LLMs (OpenAI, Claude, Cursor)", logo: "icon-ai-generated-code" },
+        { nombre: "Arquitecturas RAG", logo: "icon-brain-3" },
+        { nombre: "NLP", logo: "icon-brain-3" },
+        { nombre: "LangChain", logo: "icon-python" },
+        { nombre: "LangGraph", logo: "icon-python" },
+        { nombre: lang === "es" ? "Agentes Autónomos" : "Autonomous Agents", logo: "icon-brain-3" },
       ],
     },
     {

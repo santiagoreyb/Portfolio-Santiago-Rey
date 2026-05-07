@@ -86,8 +86,8 @@ function CursosCertificados({ darkMode, lang = "es" }) {
               "Development of creative solutions using Microsoft technologies.",
             ],
       insignia: "https://www.credly.com/badges/ae8e3e9e-8693-42a5-8cc9-dde612a9a7fc/linked_in_profile",
-      technologies: ["Microsoft", "Innovation"],
-      logos: ["icon-windows", "icon-problem-solving"],
+      technologies: ["Python", "Streamlit", "React", "Node.js", "IA", "Azure"],
+      logos: ["icon-python", "icon-python", "icon-react", "icon-nodejs", "icon-brain-3", "icon-azure-1"],
     },
     {
       area: "Inteligencia Artificial",

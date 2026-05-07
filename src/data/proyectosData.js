@@ -26,6 +26,8 @@ export const proyectos = [
     fecha: "2026",
     imagenes: [SURE.sure1, SURE.sure2, SURE.sure3, SURE.sure4],
     tecnologias: [
+      { name: "Python", logo: "icon-python" },
+      { name: "Streamlit", logo: "icon-python" },
       { name: "React", logo: "icon-react" },
       { name: "Node.js", logo: "icon-nodejs" },
       { name: "IA", logo: "icon-brain-3" },
