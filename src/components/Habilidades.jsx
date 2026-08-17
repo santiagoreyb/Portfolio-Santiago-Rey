@@ -10,6 +10,11 @@ function Habilidades({ darkMode, lang }) {
       tituloGeneral: "🧠 Habilidades Técnicas",
       cerrar: "Cerrar sección",
       abrir: "Abrir sección",
+      tituloIdiomas: "🌍 Idiomas",
+      idiomas: [
+        { bandera: "🇨🇴", nombre: "Español", nivel: "Nativo" },
+        { bandera: "🇬🇧", nombre: "Inglés", nivel: "B2 - Intermedio alto" },
+      ],
       categorias: {
         frontend: "💻 Frontend",
         backend: "⚙️ Backend",
@@ -26,6 +31,11 @@ function Habilidades({ darkMode, lang }) {
       tituloGeneral: "🧠 Technical Skills",
       cerrar: "Close section",
       abrir: "Open section",
+      tituloIdiomas: "🌍 Languages",
+      idiomas: [
+        { bandera: "🇨🇴", nombre: "Spanish", nivel: "Native" },
+        { bandera: "🇬🇧", nombre: "English", nivel: "B2 - Upper intermediate" },
+      ],
       categorias: {
         frontend: "💻 Frontend",
         backend: "⚙️ Backend",
@@ -192,12 +202,50 @@ function Habilidades({ darkMode, lang }) {
           }`}
       >
         <div className="flex flex-col gap-4 mt-10">
+          {/* 🌍 Idiomas */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`rounded-2xl shadow-md border p-5 transition-all duration-300 backdrop-blur-md ${darkMode
+                ? "bg-[#0f172a]/80 border-cyan-500/30 hover:border-cyan-400/60"
+                : "bg-[#cdd3e1] border-gray-300 hover:border-gray-400"
+              }`}
+          >
+            <h3
+              className={`text-xl font-semibold mb-3 ${darkMode ? "text-cyan-300" : "text-gray-800"
+                }`}
+            >
+              {t.tituloIdiomas}
+            </h3>
+
+            <div className="flex flex-wrap gap-3">
+              {t.idiomas.map((idioma, i) => (
+                <div
+                  key={i}
+                  className={`flex items-center gap-3 px-4 py-2 rounded-xl border transition-all duration-300 ${darkMode
+                      ? "bg-cyan-400/10 border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/20"
+                      : "bg-cyan-100 border-cyan-300 text-cyan-700 hover:bg-cyan-200"
+                    }`}
+                >
+                  <span className="text-2xl" aria-hidden="true">
+                    {idioma.bandera}
+                  </span>
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-sm font-semibold">{idioma.nombre}</span>
+                    <span className="text-xs opacity-90">{idioma.nivel}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {categorias.map((cat, idx) => (
             <Categoria
               key={idx}
               categoria={cat}
               darkMode={darkMode}
-              delay={idx * 0.1}
+              delay={(idx + 1) * 0.1}
             />
           ))}
         </div>

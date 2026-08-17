@@ -105,7 +105,7 @@ function Header({ darkMode, setDarkMode, lang, setLang }) {
 
       {/* Menú móvil */}
       {menuOpen && (
-        <div className="md:hidden flex flex-col items-center pb-4 space-y-3">
+        <div className="lg:hidden flex flex-col items-center pb-4 space-y-3">
           {links.map((link) => (
             <a
               key={link.id}

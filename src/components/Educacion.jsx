@@ -147,6 +147,8 @@ function Educacion({ darkMode, lang }) {
 
                     <a
                       href={exp.insignia}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`sm:ml-auto px-3 sm:px-4 py-1 rounded-2xl shadow-lg backdrop-blur-md border text-xs sm:text-sm text-center ${
                         darkMode
                           ? "bg-cyan-400/10 border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/20"

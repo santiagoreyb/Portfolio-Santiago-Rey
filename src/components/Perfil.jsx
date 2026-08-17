@@ -9,10 +9,10 @@ function Perfil({ darkMode, lang }) {
     es: {
       greeting: "¡Hey!",
       name: "Soy Santiago",
-      role: "Ingeniero de Sistemas",
+      role: "Desarrollador de Software y Automatizador con IA",
       description: (
         <>
-          con sólida experiencia en{" "}
+          Ingeniero de Sistemas con sólida experiencia en{" "}
           <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
             desarrollo full-stack y arquitecturas en la nube
           </span>
@@ -38,10 +38,10 @@ function Perfil({ darkMode, lang }) {
     en: {
       greeting: "Hey!",
       name: "I'm Santiago",
-      role: "Systems Engineer",
+      role: "Software Developer and AI Automator",
       description: (
         <>
-          with solid experience in{" "}
+          Systems Engineer with solid experience in{" "}
           <span className={darkMode ? "text-[#7EC8E3]" : "text-[#078AB9]"}>
             full-stack development and cloud architectures
           </span>

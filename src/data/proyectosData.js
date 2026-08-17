@@ -24,12 +24,13 @@ export const proyectos = [
       en: "Intelligent agent and comprehensive platform to optimize business decision-making."
     },
     fecha: "2026",
+    destacado: true,
     imagenes: [SURE.sure1, SURE.sure2, SURE.sure3, SURE.sure4],
     tecnologias: [
       { name: "Python", logo: "icon-python" },
       { name: "Streamlit", logo: "icon-python" },
       { name: "React", logo: "icon-react" },
-      { name: "Node.js", logo: "icon-nodejs" },
+      { name: "Node.js", logo: "icon-javascript" },
       { name: "IA", logo: "icon-brain-3" },
       { name: "Azure", logo: "icon-azure-1" },
     ],
@@ -43,6 +44,7 @@ export const proyectos = [
       en: "Video game developed in Unity for the GameJam organized by the Colombian Society of Engineers. Includes innovative gameplay mechanics, level design, and 3D character modeling with Blender."
     },
     fecha: "Dic 2024 - Ene 2025",
+    destacado: true,
     imagenes: [NeonCat.neoncat1, NeonCat.neoncat2],
     tecnologias: [
       { name: "C#", logo: "icon-c-sharp-logo" },
@@ -61,6 +63,7 @@ export const proyectos = [
       en: "Interactive 3D video game promoting environmental conservation, recreating the Northern Caldas Biological Station. Integrates realistic graphics, real-time interactions, and web deployment with React and Azure."
     },
     fecha: "Feb 2024 - Nov 2024",
+    destacado: true,
     imagenes: [EcoGuardians.eco1, EcoGuardians.eco2, EcoGuardians.eco3],
     tecnologias: [
       { name: "C#", logo: "icon-c-sharp-logo" },

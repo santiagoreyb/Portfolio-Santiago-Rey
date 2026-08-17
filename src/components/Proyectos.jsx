@@ -11,6 +11,11 @@ function Proyectos({ darkMode, lang}) {
   const [isOpen, setIsOpen] = useState(true);
   const [globalFullImage, setGlobalFullImage] = useState(null);
 
+  // Los proyectos destacados se muestran primero
+  const proyectosOrdenados = [...proyectosData].sort(
+    (a, b) => Number(Boolean(b.destacado)) - Number(Boolean(a.destacado))
+  );
+
   return (
     <div
       className={`w-[90%] max-w-6xl mx-auto pt-5 transition-all duration-300 ${
@@ -57,7 +62,7 @@ function Proyectos({ darkMode, lang}) {
       >
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-          {proyectosData.map((proyecto, idx) => (
+          {proyectosOrdenados.map((proyecto, idx) => (
             <ProyectoCard
               key={idx}
               proyecto={proyecto}
@@ -149,14 +154,29 @@ function ProyectoCard({ proyecto, darkMode, lang, delay, setGlobalFullImage }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className={`rounded-2xl overflow-hidden shadow-lg backdrop-blur-md border transition-all duration-300 ${
-        darkMode
-          ? "bg-[#0f172a] border-cyan-500/30 hover:border-cyan-400/60"
-          : "bg-[#d7dae4] border-gray-300 hover:border-gray-400"
+      className={`rounded-2xl overflow-hidden shadow-lg backdrop-blur-md transition-all duration-300 ${
+        proyecto.destacado
+          ? darkMode
+            ? "bg-[#0f172a] border-2 border-amber-400/60 hover:border-amber-300 shadow-amber-500/10"
+            : "bg-[#d7dae4] border-2 border-amber-500/70 hover:border-amber-600"
+          : darkMode
+            ? "bg-[#0f172a] border border-cyan-500/30 hover:border-cyan-400/60"
+            : "bg-[#d7dae4] border border-gray-300 hover:border-gray-400"
       }`}
     >
       {/* Slider */}
       <div className="relative h-64 overflow-hidden group bg-black/5">
+        {proyecto.destacado && (
+          <span
+            className={`absolute top-2 left-2 z-20 px-2 py-1 rounded-md text-xs font-bold shadow-md ${
+              darkMode
+                ? "bg-amber-400 text-gray-900"
+                : "bg-amber-500 text-white"
+            }`}
+          >
+            ⭐ {lang === "es" ? "Destacado" : "Featured"}
+          </span>
+        )}
         <AnimatePresence>
           <motion.img
             key={index}

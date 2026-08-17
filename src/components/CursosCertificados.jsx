@@ -51,6 +51,71 @@ function CursosCertificados({ darkMode, lang = "es" }) {
   const cursos = [
     {
       area: "Cloud",
+      role: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      company: "Microsoft",
+      date: lang === "es" ? "Ago 2026" : "Aug 2026",
+      logo: microsoft,
+      insights:
+        lang === "es"
+          ? [
+              "Certificación oficial de Microsoft en fundamentos de la nube.",
+              "Arquitectura y servicios de Azure, administración y gobernanza.",
+            ]
+          : [
+              "Official Microsoft certification in cloud fundamentals.",
+              "Azure architecture and services, management and governance.",
+            ],
+      insignia: "https://learn.microsoft.com/en-us/users/santiagoreyb/credentials/3b0a8c1e7f8251b6",
+      technologies: ["Azure", "Cloud Computing", lang === "es" ? "Gobernanza" : "Governance"],
+      logos: ["icon-azure-1", "icon-cloud-storage", "icon-settings-3"],
+    },
+    {
+      area: "Cloud",
+      role: "AWS Certified Cloud Practitioner",
+      company: "Amazon Web Services",
+      date: lang === "es" ? "Jun 2026 · Vigente hasta Jun 2029" : "Jun 2026 · Valid until Jun 2029",
+      logo: aws,
+      insights:
+        lang === "es"
+          ? [
+              "Certificación oficial de AWS en fundamentos de la nube.",
+              "Servicios core de AWS: EC2, S3, seguridad, arquitectura y modelo de costos.",
+            ]
+          : [
+              "Official AWS certification in cloud fundamentals.",
+              "Core AWS services: EC2, S3, security, architecture, and pricing model.",
+            ],
+      insignia: "https://www.credly.com/badges/467c117b-af64-4cf9-a4dd-c840164c9549/linked_in_profile",
+      technologies: ["AWS", "Amazon EC2", "Amazon S3", "Cloud Computing"],
+      logos: [
+        "icon-amazon-web-services",
+        "icon-amazon-web-services",
+        "icon-cloud-storage",
+        "icon-amazon-web-services",
+      ],
+    },
+    {
+      area: "Inteligencia Artificial",
+      role: "Generative AI Leader Certification",
+      company: "Google",
+      date: lang === "es" ? "Jul 2026 · Vigente hasta Jul 2029" : "Jul 2026 · Valid until Jul 2029",
+      logo: google,
+      insights:
+        lang === "es"
+          ? [
+              "Certificación oficial de Google Cloud en Inteligencia Artificial Generativa.",
+              "Estrategia y adopción de soluciones de IA generativa en entornos empresariales.",
+            ]
+          : [
+              "Official Google Cloud certification in Generative AI.",
+              "Strategy and adoption of generative AI solutions in business environments.",
+            ],
+      insignia: "https://www.credly.com/badges/a514c8bc-9b62-405f-b0ab-27f161c80d89/linked_in_profile",
+      technologies: ["IA Generativa", "Google Cloud", "LLMs"],
+      logos: ["icon-ai-generated-code", "icon-google-cloud", "icon-brain-3"],
+    },
+    {
+      area: "Cloud",
       role: "Associate Cloud Engineer",
       company: "Google",
       date: "Feb 2026",
@@ -87,7 +152,7 @@ function CursosCertificados({ darkMode, lang = "es" }) {
             ],
       insignia: "https://www.credly.com/badges/ae8e3e9e-8693-42a5-8cc9-dde612a9a7fc/linked_in_profile",
       technologies: ["Python", "Streamlit", "React", "Node.js", "IA", "Azure"],
-      logos: ["icon-python", "icon-python", "icon-react", "icon-nodejs", "icon-brain-3", "icon-azure-1"],
+      logos: ["icon-python", "icon-python", "icon-react", "icon-javascript", "icon-brain-3", "icon-azure-1"],
     },
     {
       area: "Inteligencia Artificial",
@@ -111,21 +176,21 @@ function CursosCertificados({ darkMode, lang = "es" }) {
     },
     {
       area: "Cloud",
-      role: "AWS/re/Start",
+      role: "AWS re/Start Graduate",
       company: "Amazon Web Services",
-      date: lang === "es" ? "En curso (May 2026)" : "In progress (May 2026)",
+      date: "Jun 2026",
       logo: aws,
       insights:
         lang === "es"
           ? [
-              "Fundamentos de AWS Cloud, Linux, redes, seguridad y bases de datos.",
-              "Preparación para la certificación AWS Certified Cloud Practitioner.",
+              "Programa completado en fundamentos de AWS Cloud, Linux, redes, seguridad y bases de datos.",
+              "Culminó con la obtención de la certificación AWS Certified Cloud Practitioner.",
             ]
           : [
-              "AWS Cloud fundamentals, Linux, networking, security, and databases.",
-              "Preparation for the AWS Certified Cloud Practitioner certification.",
+              "Completed program in AWS Cloud fundamentals, Linux, networking, security, and databases.",
+              "Culminated in earning the AWS Certified Cloud Practitioner certification.",
             ],
-      insignia: "",
+      insignia: "https://www.credly.com/badges/6ffc1bfa-789b-4633-9ac1-818fe24bacf1/linked_in_profile",
       technologies: ["AWS", "Linux", "Networking"],
       logos: ["icon-amazon-web-services", "icon-linux", "icon-settings-3"],
     },

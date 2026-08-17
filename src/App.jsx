@@ -59,9 +59,10 @@ function App({ defaultLang = "es" }) {
     }
   }, [darkMode]);
 
-  // Guardar idioma cuando cambia
+  // Guardar idioma cuando cambia y reflejarlo en el <html lang="">
   useEffect(() => {
     localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
   }, [lang]);
 
   return (

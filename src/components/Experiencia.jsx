@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import colpensiones from "../assets/pictures/colpensiones.png";
-import freelance from "../assets/pictures/freelance.png"; // 🔹 Logo genérico
+import javeriana from "../assets/pictures/javeriana.png";
 import ecu from "../assets/pictures/ecu.png";
 
 function Experiencia({ darkMode, lang }) {
@@ -26,8 +26,8 @@ function Experiencia({ darkMode, lang }) {
     {
       company: "ECU Worldwide",
       role: {
-        es: "Desarrollador Full Stack / Ingeniero de Software",
-        en: "Full Stack Developer / Software Engineer",
+        es: "Desarrollador EDI / Full Stack",
+        en: "EDI Developer / Full Stack Developer",
       },
       date: {
         es: "Bogotá, Colombia · Dic 2025 – Presente",
@@ -36,7 +36,7 @@ function Experiencia({ darkMode, lang }) {
       logo: ecu,
       description: {
         es: [
-          "Desarrollé y mantuve aplicaciones web escalables utilizando Angular, Java, Python, C#, .NET 8/10 y VB, participando en la definición de arquitecturas y mejores prácticas de desarrollo.",
+          "Desarrollé y mantuve aplicaciones web escalables utilizando Angular, Python, C#, .NET 8/10 y VB, participando en la definición de arquitecturas y mejores prácticas de desarrollo.",
           "Lideré integraciones hacia sistemas de aduanas en LATAM y EE. UU. (formatos XML, EDI, PDF), automatizando procesos, reduciendo costos operativos y agilizando envíos.",
           "Implementé e integré webservices y procesos automatizados por SFTP mediante archivos planos para asegurar una correcta comunicación y transferencia de datos entre sistemas.",
           "Diseñé y optimicé consultas y procedimientos almacenados en bases de datos PostgreSQL y SQL Server, mejorando el rendimiento general.",
@@ -44,7 +44,7 @@ function Experiencia({ darkMode, lang }) {
           "Brindé soporte técnico, documenté procesos técnicos de manera precisa y resolví issues críticos de implementaciones anteriores durante la fase de implementación.",
         ],
         en: [
-          "Developed and maintained scalable web applications using Angular, Java, Python, C#, .NET 8/10, and VB, participating in defining architectures and best development practices.",
+          "Developed and maintained scalable web applications using Angular, Python, C#, .NET 8/10, and VB, participating in defining architectures and best development practices.",
           "Led integrations with customs systems in LATAM and the US (XML, EDI, PDF formats), automating processes, reducing operational costs, and streamlining shipments.",
           "Implemented and integrated webservices and automated SFTP processes via flat files to ensure proper communication and data transfer between systems.",
           "Designed and optimized queries and stored procedures in PostgreSQL and SQL Server databases, improving overall performance.",
@@ -54,16 +54,15 @@ function Experiencia({ darkMode, lang }) {
       },
       logos: [
         "icon-angularjs",
-        "icon-java-coffee-cup-logo",
         "icon-python",
         "icon-c-sharp-logo",
         "icon-net-framework",
-        "icon-postgresql",
+        "icon-postgreesql",
         "icon-microsoft-sql-server",
         "icon-git",
         "icon-azure-1",
       ],
-      technologies: ["Angular", "Java", "Python", "C#", ".NET", "PostgreSQL", "SQL Server", "DevOps", "Azure"],
+      technologies: ["Angular", "Python", "C#", ".NET", "PostgreSQL", "SQL Server", "DevOps", "Azure"],
     },
     {
       company: "Colpensiones",
@@ -138,38 +137,36 @@ function Experiencia({ darkMode, lang }) {
       technologies: ["Unity", ".NET", "C#", "Blender", "React", "JavaScript", "Adobe Illustrator", "Adobe Photoshop"],
     },
     {
-      company: "Freelance",
+      company: "Pontificia Universidad Javeriana",
       role: {
-        es: "Desarrollador Full Stack Independiente",
-        en: "Independent Full Stack Developer",
+        es: "Monitor de Proyectos de Programación Avanzada",
+        en: "Advanced Programming Projects Assistant",
       },
       date: {
-        es: "Bogotá, Colombia · Ene 2023 – Dic 2023",
-        en: "Bogotá, Colombia · Jan 2023 – Dec 2023",
+        es: "Bogotá, Colombia · Ene 2023 – Jun 2023",
+        en: "Bogotá, Colombia · Jan 2023 – Jun 2023",
       },
-      logo: freelance,
+      logo: javeriana,
       description: {
         es: [
-          "Desarrollé soluciones personalizadas para clientes en los sectores educativo y tecnológico, utilizando .NET, Java, Python, C++ y JavaScript, garantizando aplicaciones funcionales, seguras y escalables.",
-          "Implementé arquitecturas modulares y APIs REST, mejorando la integración entre sistemas y la eficiencia en el mantenimiento de proyectos.",
-          "Optimizé interfaces y flujos de usuario aplicando principios de UX/UI y diseño responsivo, incrementando la satisfacción de los usuarios finales.",
-          "Gestioné proyectos bajo metodologías ágiles, asegurando entregas a tiempo y comunicación efectiva con los clientes.",
+          "Apoyé proyectos de programación avanzada usando Java, Python, C y C++, garantizando código de alta calidad y apego a las buenas prácticas.",
+          "Coordiné el trabajo de equipos ágiles para desarrollar soluciones tecnológicas innovadoras, mejorando la eficiencia y la colaboración en los proyectos.",
+          "Contribuí a la entrega exitosa de múltiples proyectos, mejorando el rendimiento de los sistemas y la satisfacción de los usuarios.",
         ],
         en: [
-          "Developed customized solutions for clients in the educational and tech sectors using .NET, Java, Python, C++, and JavaScript, ensuring functional, secure, and scalable applications.",
-          "Implemented modular architectures and REST APIs, improving system integration and project maintenance efficiency.",
-          "Optimized interfaces and user flows using UX/UI principles and responsive design, increasing end-user satisfaction.",
-          "Managed projects under agile methodologies, ensuring timely deliveries and effective client communication.",
+          "Supported advanced programming projects using Java, Python, C, and C++, ensuring high-quality code and adherence to best practices.",
+          "Coordinated agile team efforts to develop innovative technological solutions, enhancing project efficiency and collaboration.",
+          "Contributed to the successful delivery of multiple projects, leading to improved system performance and user satisfaction.",
         ],
       },
       logos: [
-        "icon-net-framework",
         "icon-java-coffee-cup-logo",
         "icon-python",
+        "icon-c-programming",
         "icon-c-plus-plus-logo",
-        "icon-javascript",
+        "icon-external-scrum-agile-flaticons-lineal-color-flat-icons-6",
       ],
-      technologies: [".NET", "Java", "Python", "C++", "JavaScript"],
+      technologies: ["Java", "Python", "C", "C++", "Scrum"],
     },
   ];
 
