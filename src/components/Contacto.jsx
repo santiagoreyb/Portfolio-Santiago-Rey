@@ -73,7 +73,7 @@ function Contacto({ darkMode, lang }) {
   return (
     <div
       className={`w-[90%] max-w-6xl mx-auto pt-8 transition-all duration-300 ${
-        isOpen ? "min-h-screen" : "h-auto"
+        isOpen ? "pb-12" : "h-auto"
       }`}
     >
       {/* Encabezado */}
